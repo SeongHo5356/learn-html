@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>hello</title>
+</head>
+
+<body>
+<Tag = Attr = "value">Contents</Tag>
+<a href= "http://www.naver.com">click here</a>
+<br>
+<img src = "value" alt = "text">contents
+<img src =  alt = "hupmunk!">
+
+--inline 
+<br>
+<b>
+<em>
+<a>
+<img>
+<span>
+<strong>
+
+--block
+<p>
+<div>
+<form>
+
+I am going to <em>learn</em> to <b>love</b> HTML
+<p>This is a really long sentence for a line</p> 
+<p>This is a really long sentence for a line</p>
+</body>
+
+</html>
+
+
+#URL(uniform resource loactor)
+http	  ://   	www.naver.com		/
+protocol			Host name			path
+
+protocol : http, https, ftp
+
+#Query parameter(Get parameters) = p,q,,, &로 구별
+http://example.com/foo ?p=1
+
+name = value 형식
+
+http://example.com/foo ?p=1&q=neat
+http://example.com/foo ?p=foo&z=p
+그러나 보안이 잘 안됨(url)에 표시됨
+설문조사 같은 거에서 사용가능
+
+#URL : fragments
+웹 페이지 주소가 길떄 소속된 곳을 표시함
+http://www.example.com/foo#fragment
+http://www.example.com/foo?p=1#fragment
+
+#URL : port
+http://localhost:8000/
+defalut port : 80
+if you want to use a different port, you need to include it between the host and the path 
+seperated by a colon
+이미 도메인은 노출됐지만 아직 개발이 필요한 상태일 떄
+협력 과정 중 도메인은 못바꾸고 포트번호를 따로해서 허용된 사람만 접속 허용하게 할때
+
+#Quiz on URL
+http://example.com:80/toys?p=foo#hello
+host		example.com
+protocol	http
+fragment	#hello
+query		?p=foo
+port		80
+path 		/topys
+
+#HTTP(통신규약)
+-hyper text protocol
+-main protocol of the web
+-what your browser uses to talk to the servers
+
+#http://www.example.com
+the request from the browser to the server begins with a request line
+Get    	/ 		HTTP/1.1
+method	path	version
+
+#Quiz on HTTP
+Given the following URl
+http://example.com/foo/logo.png?p=1#tricky
+what is the request line to get this url using http/1.1
+
+-> Get/foo/logo.png?p=1 Http/1.1
+
+#Http Request - a request line and headers
+
+A request line			Get/foo?p=1 Http/1.1
+Followed by headers		Host:www.example.com
+Name :value				user-agent :chrome v.17
+
+One web server can host many websites
+E.g Web hosting company can host many websites
+
+#HTTP Responses
+->Request(Request line)
+GET/foo HTTP/1.1
+->Response(status line)
+HTTP/1.1 	200 			0k
+version		status code 	Reason phrase
+
+Request - Response
